@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
-    List<T> findAll();
+   /* List<T> findAll();
     List<T> findAll(Sort sort);
     List<T> findAllById(Iterable<ID> ids);
     <S extends T> List<S> saveAll(Iterable<S> entities);
@@ -19,5 +19,5 @@ public interface UserRepository extends JpaRepository<User, Long>{
     T getOne(ID id);
     @Override
     <S extends T> List<S> findAll(Example<S> example);
-    <S extends T> List<S> findAll(Example<S> example, Sort sort);
+    <S extends T> List<S> findAll(Example<S> example, Sort sort);*/
 }

@@ -2,7 +2,13 @@ package com.example.Kursach;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import javax.persistence.Entity;
+
+//@EnableJpaRepositories("com.example.Kursach.repository")
+//@EntityScan("com.example.Kursach.model")
 @SpringBootApplication
 public class KursachApplication {
 

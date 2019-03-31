@@ -1,20 +1,17 @@
 package com.example.Kursach.model;
 import javax.persistence.*;
 
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 @Entity
-@Table(name = "users")
-@EntityListeners(AuditingEntityListener.class)
+//@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "firstName")
+   // @Column(name = "firstName")
     private String firstName;
-    @Column(name = "lastName")
+   // @Column(name = "lastName")
     private String lastName;
-    @Column(name = "phone")
+    //@Column(name = "phone")
     private String phone;
 public User(){}
 public User(String firstName, String lastName, String phone)

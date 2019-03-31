@@ -1,23 +1,10 @@
 package com.example.Kursach.repository;
+
 import com.example.Kursach.model.User;
-import org.springframework.data.domain.Example;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
+// This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
+// CRUD refers Create, Read, Update, Delete
+public interface UserRepository extends CrudRepository<User, Integer> {
 
-@Repository
-public interface UserRepository extends JpaRepository<User, Long>{
-   /* List<T> findAll();
-    List<T> findAll(Sort sort);
-    List<T> findAllById(Iterable<ID> ids);
-    <S extends T> List<S> saveAll(Iterable<S> entities);
-    void flush();
-    <S extends T> S saveAndFlush(S entity);
-    void deleteInBatch(Iterable<T> entities);
-    void deleteAllInBatch();
-    T getOne(ID id);
-    @Override
-    <S extends T> List<S> findAll(Example<S> example);
-    <S extends T> List<S> findAll(Example<S> example, Sort sort);*/
 }

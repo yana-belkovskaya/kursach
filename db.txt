@@ -1,0 +1,14 @@
+CREATE TABLE user(
+          id int(11) NOT NULL AUTO_INCREMENT,
+             first_name varchar(45) DEFAULT NULL,
+             last_name varchar(45) DEFAULT NULL,
+         phone varchar(12) DEFAULT NULL,
+             PRIMARY KEY (id)
+             ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=cp1251;
+insert into user(first_name,last_name,phone) values('yana','belkovskaya','11111111');
+ insert into user(first_name,last_name,phone) values('ivan','ivanov','2222222');
+insert into user(first_name,last_name,phone) values('алексей','александров','3333');
+ALTER DATABASE Kursach DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci;
+ALTER TABLE user CONVERT TO CHARACTER SET cp1251 COLLATE cp1251_general_ci;
+ALTER TABLE user DEFAULT CHARACTER SET cp1251 COLLATE cp1251_general_ci;
+ SET NAMES 'cp1251';

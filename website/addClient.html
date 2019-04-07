@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Add new client</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="cp1251">
+    <meta HTTP-EQUIV="Content-Language" CONTENT="ru">
+    <style>
+        form {
+            color: Purple;
+            font-weight: bold;
+            font-size: 18px;}
+    </style>
+
+</head>
+<body>
+
+<h1 align="center" style="color: Purple">Данные о клиенте</h1>
+<center>
+    <form name="frmAddClient" id="addForm">
+        Имя <br/><input type="text" name="firstName" id="firstName" required> <br/>
+        Фамилия <br/><input type="text" name="lastName" id="lastName" required> <br/>
+        Телефон <br/><input type="text" name="phone" id="phone" pattern="\+\d+ \(\d+\) \d+" required> <br/>
+        <br/><input type="submit" value="Добавить">
+
+    </form>
+</center>
+<p style="font-size: 18px;color: Purple; font-weight: bold" align="center"><a
+        href="file:///C:/Users/Lenovo/Desktop/Курсач/Kursach/website/clients.html">Вернуться к списку клиентов</a></p>
+<script src="js/addClient.js"></script>
+</body>
+</html>

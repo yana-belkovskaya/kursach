@@ -26,10 +26,19 @@ private UserService userService;
     public List<User> getAllUsers() {
         return userService.findAll();
     }
+    @GetMapping("/users/{id}")
+    public Optional<User> getUser(@PathVariable(value = "id") int Id) {
+        return userService.findById(Id);
+    }
+    /*@GetMapping("/users/name/{id}")
+    public String getName(@PathVariable(value = "id")int Id){
+       return userService.findById(Id).get().getFirstName();
+    }*/
     @CrossOrigin
     @PostMapping("/users")
     public User addUser(@Valid @RequestBody User user)
     { return userService.addUser(user);}
+    @CrossOrigin
     @PutMapping("/users/{id}")
     public User updateUser(@PathVariable(value = "id") int Id,@Valid @RequestBody User user)
     {

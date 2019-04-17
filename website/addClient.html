@@ -11,17 +11,22 @@
             font-weight: bold;
             font-size: 18px;}
     </style>
-
+<link  rel="stylesheet" href="css/btnStyle.css" type="text/css">
 </head>
 <body>
-
+<nav><button class="btnMenu" onclick=window.location="clients.html">Клиенты</button>                  <button class="btnMenu">Депозиты</button>                   <button class="btnMenu">Счета</button></nav>
 <h1 align="center" style="color: Purple">Данные о клиенте</h1>
 <center>
     <form name="frmAddClient" id="addForm">
         Имя <br/><input type="text" name="firstName" id="firstName" required> <br/>
+		Отчество <br/><input type="text" name="middleName" id="middleName" required> <br/>
         Фамилия <br/><input type="text" name="lastName" id="lastName" required> <br/>
+		Дата рождения<br/><input type="date" name="dob" id="dob" required> <br/>
+		Пол<br/><input name="sex" type="radio" id="sex" value="male"> Мужской <input name="sex" type="radio" id="sex" value="female"> Женский <br/>
         Телефон <br/><input type="text" name="phone" id="phone" pattern="\+\d+ \(\d+\) \d+" required> <br/>
-        <br/><input type="submit" value="Добавить">
+		Адрес<br/><input type="text" name="address" id="address" required> <br/>
+		Номер паспорта<br/><input type="text" name="passportNumber" id="passportNumber" required> <br/>
+        <br/><input type="submit" class="btn" value="Добавить">
 
     </form>
 </center>

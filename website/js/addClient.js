@@ -9,8 +9,13 @@ function addClient(e) {
     let data = {};
     data.id = "0";
     data.firstName = document.getElementById("firstName").value;
+	data.middleName = document.getElementById("middleName").value;
     data.lastName = document.getElementById("lastName").value;
+	data.dob = document.getElementById("dob").value;
+	data.sex=document.getElementById("sex").value;
     data.phone = document.getElementById("phone").value;
+	data.address = document.getElementById("address").value;
+	data.passportNumber = document.getElementById("passportNumber").value;
     let json = JSON.stringify(data);
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);

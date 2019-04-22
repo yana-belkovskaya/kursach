@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Update deposit</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="cp1251">
+    <meta HTTP-EQUIV="Content-Language" CONTENT="ru">
+    <style>
+        form {
+            color: Purple;
+            font-weight: bold;
+            font-size: 18px;}
+    </style>
+<link  rel="stylesheet" href="css/btnStyle.css" type="text/css">
+</head>
+<body>
+<nav><button class="btnMenu" onclick=window.location="clients.html">Клиенты</button>                  <button class="btnMenu"onclick=window.location="allDeposits.html">Депозиты</button>                   <button class="btnMenu">Счета</button></nav>
+<p align="right"><button  class="btn" onclick="enter()">Выход</button></p>
+<h1 align="center" style="color: Purple">Данные депозита</h1>
+<center>
+    <form name="frmAddDeposit" id="addDepForm">
+	Валюта <br/><select id="currency"required><option>USD</option><option>EUR</option><option>BYN</option><option>RUB</option>
+	</select><br/>
+	Тип <br/><select id="type"required><option>Срочный</option><option>До востребования</option>
+	</select><br/>
+		Дата открытия<br/><input type="datetime" name="dos" id="dos" required> <br/>
+		Дата закрытия<br/><input type="datetime" name="dof" id="dof" required> <br/>
+		Сумма<br/><input type="text" name="sum" id="sum" required> <br/>
+		Процент<br/><input type="text" name="percent" id="percent" required> <br/>
+        <br/><input type="submit" class="btn" value="Обновить">
+
+    </form>
+</center>
+<p style="font-size: 18px;color: Purple; font-weight: bold" align="center"><a
+        href="file:///C:/Users/Lenovo/Desktop/Курсач/Kursach/website/clientDeposits.html">Вернуться к списку депозитов клиента</a></p>
+<script src="js/updateDeposit.js">function enter(){window.location="logIn.html";}</script>
+</body>
+</html>

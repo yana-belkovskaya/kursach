@@ -1,40 +1,38 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
 
     <title>List of clients</title>
-    <meta http-equiv="Content-Type" content="text/html" charset="cp1251">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <meta HTTP-EQUIV="Content-Language" CONTENT="ru">
 	<link  rel="stylesheet" href="css/btnStyle.css" type="text/css">
 </head>
 <body>
 <nav><button class="btnMenu" onclick=window.location="clients.html">Клиенты</button>                  <button class="btnMenu"onclick=window.location="allDeposits.html">Депозиты</button>                   <button class="btnMenu">Счета</button></nav>
 <p align="right"><button  class="btn" onclick="enter()">Выход</button></p>
-<h1  align="center" style="color: Purple"> Клиенты</h1>
+<h1  align="center" style="color: Purple"> Депозиты</h1>
 <table border=2 style="font-size: 18px;" align="center">
     <thead style="color: Purple">
     <tr>
 	 <th >Id</th>
-        <th >Имя</th>
-		<th >Отчество</th>
-        <th>Фамилия</th>
-		<th >Дата рождения</th>
-	<th>Телефон</th>
-	<th >Адрес</th>
-	<th >Номер паспорта</th>
-<th>Действие</th>
-
+        <th >Валюта</th>
+		<th >Тип</th>
+        <th>Дата открытия</th>
+		<th >Дата закрытия</th>
+	<th>Сумма</th>
+	<th >Процент</th>
+	<th>Действия</th>
     </tr>
     </thead>
-    <tbody id="clientTable">
+    <tbody id="depositTable">
 
     </tbody>
 
-    <script src="js/clients.js"></script>
+    <script src="js/clientDeposits.js"></script>
 </table>
-<p align="center"><button  class="btn" onclick="addClient()">Добавить клиента</button></p>
+<p align="center"><button  class="btn" onclick="addDeposit()">Открыть новый депозит</button></p>
 <script>
-function addClient(){window.location="addClient.html";}
+function addDeposit(){window.location="addDeposit.html";}
 function enter(){window.location="logIn.html";}
 </script>
 </body>

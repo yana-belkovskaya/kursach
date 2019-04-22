@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Add new client</title>
+    <title>Update client</title>
     <meta http-equiv="Content-Type" content="text/html" charset="cp1251">
     <meta HTTP-EQUIV="Content-Language" CONTENT="ru">
     <style>
@@ -18,21 +18,20 @@
 <p align="right"><button  class="btn" onclick="enter()">Выход</button></p>
 <h1 align="center" style="color: Purple">Данные о клиенте</h1>
 <center>
-    <form name="frmAddClient" id="addForm">
+    <form name="frmUpdClient" id="updateForm">
         Имя <br/><input type="text" name="firstName" id="firstName" required> <br/>
-		Отчество <br/><input type="text" name="middleName" id="middleName" required> <br/>
+       Отчество <br/><input type="text" name="middleName" id="middleName" required> <br/>
         Фамилия <br/><input type="text" name="lastName" id="lastName" required> <br/>
 		Дата рождения<br/><input type="date" name="dob" id="dob" required> <br/>
-		Пол<br/><input name="sex" type="radio" id="sex" value="male"> Мужской <input name="sex" type="radio" id="sex" value="female"> Женский <br/>
         Телефон <br/><input type="text" name="phone" id="phone" pattern="\+\d+ \(\d+\) \d+" required> <br/>
 		Адрес<br/><input type="text" name="address" id="address" required> <br/>
 		Номер паспорта<br/><input type="text" name="passportNumber" id="passportNumber" required> <br/>
-        <br/><input type="submit" class="btn" value="Добавить">
+        <br/><input type="submit" class="btn" value="Обновить">
 
     </form>
 </center>
 <p style="font-size: 18px;color: Purple; font-weight: bold" align="center"><a
         href="file:///C:/Users/Lenovo/Desktop/Курсач/Kursach/website/clients.html">Вернуться к списку клиентов</a></p>
-<script src="js/addClient.js">function enter(){window.location="logIn.html";}</script>
+<script src="js/updateClient.js">function enter(){window.location="logIn.html";}</script>
 </body>
 </html>

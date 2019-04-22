@@ -1,7 +1,11 @@
 package com.example.Kursach.model;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 //@Table(name = "users")
 public class User {
     @Id
@@ -18,8 +22,11 @@ public class User {
     private String phone;
     private String address;
     private String passportNumber;
+    @OneToMany(mappedBy="user",cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Deposit> depositList;
 public User(){}
-public User(int id, String firstName, String middleName, String lastName, String dob, String sex, String phone, String address, String passportNumber)
+public User(int id, String firstName, String middleName, String lastName, String dob, String sex, String phone, String address, String passportNumber, List<Deposit> depositList)
 {
     this.id=id;
     this.firstName=firstName;
@@ -30,6 +37,7 @@ public User(int id, String firstName, String middleName, String lastName, String
     this.phone = phone;
     this.address = address;
     this.passportNumber = passportNumber;
+    this.depositList = depositList;
 }
 
     public String getLastName() {
@@ -102,6 +110,14 @@ public User(int id, String firstName, String middleName, String lastName, String
 
     public void setDob(String dob) {
         this.dob = dob;
+    }
+
+    public List<Deposit> getDepositList() {
+        return depositList;
+    }
+
+    public void setDepositList(List<Deposit> depositList) {
+        this.depositList = depositList;
     }
 }
 

@@ -35,6 +35,7 @@ for (let i = 0; i < clients.length; i++) {
 	let td8 = document.createElement("td");
     let td9 = document.createElement("input");
     let td10 = document.createElement("input");
+	let td11 = document.createElement("input");
     td1.appendChild(document.createTextNode(clients[i].id));
     tr.appendChild(td1);
     td2.appendChild(document.createTextNode(clients[i].firstName));
@@ -59,6 +60,10 @@ td10.setAttribute('type', 'button');
     td10.setAttribute('name', 'update');
     td10.setAttribute('value', 'Изменить');
 td10.setAttribute('class', 'btn');
+td11.setAttribute('type', 'button');
+    td11.setAttribute('name', 'deposits');
+    td11.setAttribute('value', 'Депозиты');
+td11.setAttribute('class', 'btn');
     let id = clients[i].id;
 let firstName = clients[i].firstName;
 let lastName =clients[i].lastName;
@@ -67,7 +72,7 @@ let middleName=clients[i].middleName;
 let dob=clients[i].dob;
 let address=clients[i].address;
 let passportNumber=clients[i].passportNumber;
-    td5.onclick = function () {
+    td9.onclick = function () {
         console.log("sdfvs");
        
         httpDelete("http://localhost:8080/api/v1/users", id);
@@ -88,6 +93,10 @@ localStorage.setItem("address", address);
 localStorage.setItem("passportNumber", passportNumber);
 }
 tr.appendChild(td10);
+td11.onclick=function(){
+window.location="clientDeposits.html";
+localStorage.setItem("id", id);}
+tr.appendChild(td11);
     table.appendChild(tr);
 }
 
